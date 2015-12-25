@@ -1,0 +1,17 @@
+{
+  "name": "node-js-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jade": "^1.11.0"
+  },
+  "engines": {
+    "node": "4.2.3"
+  }
+}
