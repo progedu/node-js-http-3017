@@ -1,7 +1,7 @@
 'use strict';
 let http = require('http');
 let jade = require('jade');
-var server = http.createServer((req, res) => {
+let server = http.createServer((req, res) => {
   console.info('Requested by ' + req.connection.remoteAddress);
   res.writeHead(200, {
     'Content-Type': 'text/html',
