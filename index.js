@@ -1,7 +1,7 @@
 'use strict';
-let http = require('http');
-let jade = require('jade');
-let server = http.createServer((req, res) => {
+const http = require('http');
+const jade = require('jade');
+const server = http.createServer((req, res) => {
   console.info('Requested by ' + req.connection.remoteAddress);
   res.writeHead(200, {
     'Content-Type': 'text/html',
@@ -33,9 +33,9 @@ let server = http.createServer((req, res) => {
       break;
     case 'POST':
       req.on('data', (data) => {
-        let decoded = decodeURIComponent(data);
+        const decoded = decodeURIComponent(data);
         console.info('投稿: ' + decoded);
-        res.write('<!DOCTYPE html><html lang="jp"><body><h1>' +
+        res.write('<!DOCTYPE html><html lang="jp"><head><meta charset="utf-8"></head><body><h1>' +
           decoded + 'が投稿されました</h1></body></html>');
         res.end();
       });
@@ -49,7 +49,7 @@ let server = http.createServer((req, res) => {
 }).on('clientError', (e) => {
   console.error('Client Error', e);
 });
-let port = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 server.listen(port, () => {
   console.info('Listening on ' + port);
 });
