@@ -4,8 +4,7 @@ const jade = require('jade');
 const server = http.createServer((req, res) => {
   console.info('Requested by ' + req.connection.remoteAddress);
   res.writeHead(200, {
-    'Content-Type': 'text/html',
-    'charset': 'utf-8'
+    'Content-Type': 'text/html; charset=utf-8'
   });
 
   switch (req.method) {
