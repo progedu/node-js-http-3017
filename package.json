@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jade": "^1.11.0"
+    "pug": "^2.0.0-rc.4"
   },
   "engines": {
     "node": "8.9.4"
